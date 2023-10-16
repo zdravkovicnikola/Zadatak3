@@ -1,0 +1,830 @@
+/*oznaku !important koristimo da unutrasnji css shop sekcije ne bi pregazio btn*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: #eed7c5;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #3f232b;
+    height: 50px;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: #3f292b;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+.hero-section {
+    background-image: url(../images/pozadina.jpg);
+    padding-top: 50px;
+    padding-bottom: 115px;
+    background-size: cover;
+}
+
+.hero-section h1 {
+    color: maroon;
+    text-transform: uppercase;
+    font-size: 55px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+
+.hero-section p {
+    color: #3f232b;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 18px;
+    margin-right: 20em;
+}
+
+@media (max-width: 1000px) {
+    .hero-section h1 {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero-section p {
+        margin-right: 40px;
+    }
+}
+
+.services-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.services-section h3 {
+    text-align: center;
+    color: #3f292b;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.services-section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: maroon;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+
+.services-section p {
+    text-align: center;
+    color: #818181;
+    margin: 5px;
+}
+
+.services-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5% 12%;
+    flex-wrap: wrap;
+}
+
+.services-section .service-item {
+    background-color: #1b1f20;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+    padding-bottom: 40px;
+    transition: 0.2s;
+    margin-top: 50px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.services-section .service-item:hover {
+    background-color: #b36a5e;
+    cursor: pointer;
+    margin-top: 30px;
+    -webkit-box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.8);
+}
+
+.services-section .service-item h4 {
+    text-transform: uppercase;
+}
+
+.services-section .service-item p {
+    color: #b7b8b8;
+    margin: 12px;
+}
+
+.services-section .service-item a {
+    color: #fff;
+    text-align: center;
+    display: flexbox;
+    text-decoration: none;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: .2em;
+    padding: 5px;
+}
+
+.services-section .service-item a:hover {
+    border: none;
+}
+
+.customers-say-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.customers-say-section p {
+    font-size: x-large;
+    font-weight: 300;
+    color: #b36a5e;
+    border-style: dashed;
+    border-color: #b36a5e;
+    display: inline-block;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.customers-say-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5% 12%;
+    flex-wrap: wrap;
+    background-color: #eee2df;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.customers-say-section .forma {
+    background-image: linear-gradient(#eee2df, #3f292b);
+    text-align: left !important;
+    margin: 0 10%;
+}
+
+.customers-say-section #forma_customers {
+    display: grid;
+    justify-content: left;
+    justify-items: left;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    align-content: stretch;
+
+}
+
+#komentarbtn {
+    font-size: 32px;
+    padding: 32px 16px;
+    border-radius: 12px;
+    background-color: #73956f;
+    border-color: #3f292b;
+    border: 2px solid;
+    color: #eee2df;
+}
+
+#komentarbtn:hover {
+    background-color: #3f292b;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.customers-say-section #forma_customers #polje {
+    color: #3f292b;
+    font-size: large;
+    margin: 1em;
+}
+
+.customers-say-section .forma p {
+    color: #3f292b;
+    border: none;
+    justify-content: left;
+    margin: 0;
+}
+
+.customers-say-section .forma ul {
+    padding: 10px;
+    margin: 10px 10px;
+    list-style-type: none;
+}
+
+.customers-say-section ul>li {
+    font-size: large;
+    padding: 20px;
+    margin: 20px 10px;
+    border-style: dotted;
+    border-color: #eed7c5;
+    border-width: thick;
+    border-radius: 12px;
+    display: inline-block;
+    justify-items: center;
+}
+
+/* pomocu "content" atributa se automatski prikazuju navodnici oko unetog teksta*/
+.customers-say-section ul>li::after {
+    content: close-quote;
+}
+
+.customers-say-section ul>li::before {
+    content: open-quote;
+}
+
+.customers-say-section .testimonials {
+    background-size: cover;
+    background-position: center;
+    height: 360px;
+    color: #eed7c5;
+    margin: 1em;
+
+}
+
+.customers-say-section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #3f292b;
+    font-weight: bold;
+}
+
+.customers-say-section h4 {
+    background-color: #73956f;
+    font-size: large;
+    color: #3f292b;
+}
+
+/* Preko testimonials sekcije smo napravili sekciju identicne velicine, 
+da bismo pomocu background-color zatamnili pozadinsku sliku i lakse upravljali unutrasnjim sadrzajem*/
+.customers-say-section .testimonials .testimonials-inner {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: -webkit-fill-available;
+    padding: 25px;
+    position: relative;
+}
+
+.customers-say-section .testimonials .testimonials-inner .testimonial-content {
+    position: relative;
+    bottom: 25px;
+    max-width: 200px;
+    display: inline-block;
+    font-size: large;
+}
+
+.customers-say-section .testimonials .testimonials-inner .testimonial-content .column {
+    column-count: 2;
+}
+
+.customers-say-section .testimonials .testimonials-inner .testimonial-content .column::after {
+    content: close-quote;
+    font-size: 40px;
+    color: #73956f;
+    ;
+}
+
+.customers-say-section .testimonials .testimonials-inner .testimonial-content .column::before {
+    content: open-quote;
+    font-size: 40px;
+    color: #73956f;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 100px;
+}
+
+@media (max-width: 1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 125px 30px;
+    }
+}
+
+.about-section .main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #eed7c5;
+    padding: 35px 100px 0;
+}
+
+.about-section .main-nav>ul {
+    list-style: armenian;
+}
+
+/* .about-section .main-nav img {
+    margin-top: 10px;
+} */
+
+.about-section .content {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #eed7c5;
+    text-align: center;
+}
+
+.about-section .content video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.about-section .content h1 {
+    font-size: 76px;
+    color: #EEE2DF;
+    font-weight: 600;
+    margin-bottom: 15px;
+    /* Ovom linijom podesavamo da sam efekat koji naslov pravi izgleda prijatno za oko */
+    transition: 0.5s;
+}
+
+/* Efekat koji se javlja prelaskom misa preko naslova */
+.about-section .content h1:hover {
+    /* Ovom linijom podesavamo border #eed7c5 boje i debljine od 2 piksela */
+    -webkit-text-stroke: 2px #eed7c5;
+    /* Boja mora biti prozirna kako bi samo gorepomenuti border ostao */
+    color: transparent;
+}
+
+/* Podesavanje paragrafa (pozcija, boja, velicina) */
+.about-section .content p {
+    display: inline-block;
+    color: #eed7c5;
+    font-size: 24px;
+}
+
+/* Ovim fragmentom koda smo zatamnili pozadinu samog teksta i obojili tekst */
+.about-section .school-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    padding: 50px;
+    color: #eed7c5;
+}
+
+/* span smo iskoristili kako bismo uokvirili "Prijava do"(ovo je zapravo ta zelena pozadina) */
+.about-section .school-overlay .conference-date span {
+    background-color: #73956f;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    color: #eed7c5;
+}
+
+/* podesavanja tajmera */
+.about-section .school-overlay .countdown {
+    padding: 10px;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 42px;
+    border: 1px solid #eed7c5;
+    margin-bottom: 20px;
+}
+
+.about-section .school-overlay h4 {
+    text-transform: uppercase;
+}
+
+.about-section .school-overlay p {
+    color: #eed7c5;
+}
+
+
+/* Ovde regulisemo responzivnost za rezolucije uze od 800 i 1000 piksela */
+
+@media (max-width: 800px) {
+
+    /* Deo sa tekstom i brojacem se ogranicava na minimalnu visinu od 600 piksela i pozicionira se sadrzaj */
+    .about-section .content {
+        min-height: 600px;
+    }
+
+    .about-section {
+        justify-content: left;
+    }
+
+    /* smanjuje se naslov */
+    .about-section .content h1 {
+        font-size: 56px;
+    }
+
+    .about-section .content span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-section .content h1 {
+        font-size: 56px;
+    }
+
+    .about-section {
+        justify-content: left;
+    }
+}
+
+.main-cta-btn {
+    background-color: #b36a5e;
+    border: 1px solid #3f292b;
+    padding: 10px;
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+
+
+.main-cta-btn:hover {
+    color: #3f292b !important;
+    background-color: #EEE2DF;
+    text-decoration: none;
+}
+
+
+.pricing-section {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.pricing-section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5 12%;
+    margin: 1em;
+}
+
+.pricing-section h3 {
+    text-align: center;
+    color: #73956f;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #3f292b;
+    font-weight: bold;
+}
+
+.pricing-section p {
+    text-align: center;
+    color: #3f292b;
+}
+
+.pricing-section .pricing-plan {
+    background-color: #3f292b;
+    color: #eee2df;
+    padding: 25px;
+    margin-top: 50px;
+    width: 250px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pricing-section .pricing-plan:hover {
+    background-color: #73956f;
+    cursor: pointer;
+}
+
+.pricing-section .pricing-plan a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+}
+
+.pricing-section .pricing-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-section .pricing-plan ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee2df;
+}
+
+.pricing-section .pricing-plan .price {
+    position: relative;
+    border-top: 3px dotted #eee2df;
+    border-bottom: 3px dotted #eee2df;
+    margin-bottom: 20px;
+}
+
+.pricing-section .pricing-plan .price .main-num {
+    font-size: 60px;
+    font-style: italic;
+}
+
+.pricing-section .pricing-plan .price .sec-num {
+    position: relative;
+    top: -30px;
+}
+
+.pricing-section .pricing-plan .price .month {
+    position: relative;
+    left: -25px;
+}
+
+.pricing-section .naslov_napravi {
+    color: #3f292b;
+    font-size: xx-large;
+    text-align: left;
+    margin: 1em 1em;
+}
+
+.pricing-section .forma_narucivanje {
+    margin: 1em 1em;
+}
+
+.pricing-section .forma_narucivanje input {
+    color: #3f292b;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #3f292b;
+    border-radius: 4px;
+    background-color: #eee2df;
+    outline: none;
+}
+
+.pricing-section .forma_narucivanje label {
+    position: relative;
+    margin: 8px 0;
+    font-size: large;
+
+}
+
+/*Klase kolona i redova smo koristili da bismo svaki red mogli
+da podelimo na dva dela, u proporciji 1:3, a da tretiramo red kao jedinstven
+sadrzaj (labelu i input kao celinu)*/
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Ako je ekran siri od 600px, forma se prikazuje u dve kolone*/
+@media screen and (min-width: 600px) {
+    .forma_narucivanje {
+        column-count: 2;
+    }
+}
+
+/*Ako je ekran uzi, kolone se sire do max sirine ekrana i time prelaze u redove jedna
+ ispod druge, da sadrzaj ne bi bio zbijen*/
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75 {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.pricing-section .forma_narucivanje input:focus {
+    border: 3px solid #73956f;
+}
+
+.pricing-section .forma_narucivanje textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #3f292b;
+    border-radius: 4px;
+    background-color: #eee2df;
+    resize: none;
+    margin: 8px 0;
+}
+
+.pricing-section .forma_narucivanje select {
+    width: 100%;
+    padding: 16px 20px;
+    border: #3f292b;
+    border-radius: 4px;
+    background-color: #eee2df;
+
+}
+
+.pricing-section .forma_narucivanje input[type=button],
+input[type=submit] {
+    background-color: #73956f;
+    color: #eee2df;
+    padding: 16px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 12px;
+    border-color: #3f292b;
+    border: 2px solid;
+    width: fit-content;
+}
+
+.pricing-section .forma_narucivanje input[type=submit] {
+    background-color: #73956f;
+    color: #eee2df;
+    padding: 16px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 12px;
+    border-color: #3f292b;
+    border: 2px solid;
+    width: fit-content;
+}
+
+.pricing-section .forma_narucivanje .col-75 #dugmici {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pricing-section .forma_narucivanje input[type=button]:hover {
+    background-color: #3f292b;
+    transition: 0.5s;
+}
+
+.pricing-section .forma_narucivanje input[type=submit]:hover {
+    background-color: #3f292b;
+    transition: 0.5s;
+}

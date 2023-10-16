@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>O nama</title>
+    <!-- Klikom na segment "klizac" jquery funkcija nam omogucava slide efekat padanja druge sekcije "platno" -->
+    <!-- koja u razmaku od 3000ms pravi zeljeni efekat- click fja nam omogucava interakciju Klikom -->
+    <!-- dok slideToggle fja omogucava efekat zavese uz takodje mogucnost vracanja iste nakon narednog klika -->
+    <script>
+        $(document).ready(function(){
+          $("#klizac").click(function(){
+             $("#platno").slideToggle(3000);
+          });
+        });
+    
+    </script>
+    
+    <style>
+        /* Ovo nam je deo "Radili" */
+        #klizac {
+            padding: 5px;
+            text-align: center;
+            background-color: #73956f;
+            border: solid 1px #73956f;
+            color: #eed7c5;
+            font-size: 25px;
+        }
+     /* Ovo nam je deo sa imenima */
+        #platno{
+            padding: 5px;
+            text-align: center;
+            border: solid 1px #73956f;
+            color: #73956f;
+            padding: 30px;
+            display: none;
+            font-size: 42px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-section">
+        <section class="top-nav">
+            <div>
+                <img src="../images/logo.jpg" alt="logonew" height="50" width="50" >
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+          </label>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html" target="_blank">Shop</a></li>
+              <li><a href="ratings.html" target="_blank">Ratings</a></li>
+              <li><a href="about.html" target="_blank">About as</a></li>
+            </ul>
+          </section>
+
+
+      
+        <section class="content">
+            
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="../images/Cokoladaa.mp4" type="video/mp4">
+        </video>
+            <h1>Postani deo kolektiva</h1>
+            <div class="school-overlay">
+                <p class="conference-date"><span>Prijava do</span>Novembar 25,2022</p>
+                <div class="countdown" id="countdown"></div>
+                <h4>Uclani se u organizaciju</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Consequatur id unde eius enim
+                    nesciunt tempora perspiciatis facere reprehenderit.</p>
+            </div>
+            <div id="klizac">Radili</div>
+            <div id="platno"> <b>Nikola Ivana Isidora</b></div>
+        </section>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="../js/countdown.js"></script> 
+</body>
+
+</html>

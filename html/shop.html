@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Shop</title>
+</head>
+
+<body>
+    <section class="top-nav">
+        <div>
+            <img src="../images/logo.jpg" alt="logonew" height="50" width="50" >
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" target="_blank">Shop</a></li>
+          <li><a href="ratings.html" target="_blank">Ratings</a></li>
+          <li><a href="about.html" target="_blank">About as</a></li>
+        </ul>
+      </section>
+    <div class="pricing-section">
+        <h3>Pricing plans</h3>
+        <h2>Name your price</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <div class="container">
+
+
+            <div class="pricing-plan">
+                <h4>Bombonjera 1</h4>
+                <p>Lorem ipsum dolor</p>
+                <div class="price">
+                    <span class="dollar">$</span>
+                    <span class="main-num">9</span>
+                    <span class="sec-num">98</span>
+                    <span class="month">/M</span>
+                </div>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+                <a href="#" class="main-cta-btn" onclick="Kutija()">Order now</a>
+            </div>
+
+
+            <div class="pricing-plan">
+                <h4>Bombonjera 2</h4>
+                <p>Lorem ipsum dolor</p>
+                <div class="price">
+                    <span class="dollar">$</span>
+                    <span class="main-num">19</span>
+                    <span class="sec-num">98</span>
+                    <span class="month">/M</span>
+                </div>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+                <a href="#" class="main-cta-btn" onclick="Kutija()">Order now</a>
+            </div>
+
+
+            <div class="pricing-plan">
+                <h4>Bombonjera 3</h4>
+                <p>Lorem ipsum dolor</p>
+                <div class="price">
+                    <span class="dollar">$</span>
+                    <span class="main-num">29</span>
+                    <span class="sec-num">98</span>
+                    <span class="month">/M</span>
+                </div>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+                <a href="#" class="main-cta-btn" onclick="Kutija()">Order now</a>
+            </div>
+
+            <div class="pricing-plan">
+                <h4>Bombonjera 4</h4>
+                <p>Lorem ipsum dolor</p>
+                <div class="price">
+                    <span class="dollar">$</span>
+                    <span class="main-num">39</span>
+                    <span class="sec-num">98</span>
+                    <span class="month">/M</span>
+                </div>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+                <a href="#" class="main-cta-btn" onclick="Kutija()">Order now</a>
+            </div>
+
+        </div>
+        <div class="naslov_napravi">
+            <h4>Napravi svoju poslasticu:</h4>
+        </div>
+
+        <div class="forma_narucivanje">
+            <form name="myForm" id="myForm" action = 'process-form.php' method ='post' onsubmit="Validiraj() ">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="imePrezime">Ime i prezime</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="imePrezime" name="imePrezime" placeholder="Vase ime je..."
+                            maxlength="20">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="adresa">Adresa</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="adresa" name="adresa" placeholder="Vasa adresa je..." maxlength="30">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="brojTelefona">Broj telefona</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="brojTelefona" name="brojTelefona" placeholder="06...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="grad">Grad</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="grad" name="grad">
+                            <option value="izaberi">Izaberite grad:</option>
+                            <option value="Beograd">Beograd</option>
+                            <option value="Novi Sad">Novi Sad</option>
+                            <option value="Nis">Nis</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h3>Izaberi vrstu cokolade:</h3>
+                </div>
+                <div class="row" id="tamna_cokolada">
+                    <div class="col-25">
+                        <label for="tamna">Crna cokolada</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="tamna" value="Crna cokolada" name="cokolada"> 
+                    </div>
+                </div>
+                <div class="row" id="mlecna_cokolada" default>
+                    <div class="col-25">
+                        <label for="mlecna">Mlecna cokolada</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="mlecna" value="Mlecna" checked  name="cokolada">
+                    </div>
+                </div>
+                <div class="row" id="bela_cokolada">
+                    <div class="col-25">
+                          <label for="bela">Bela cokolada</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="bela" value="Bela" name="cokolada">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h3>Izaberi dodatke:</h3>
+                </div>
+                <div class="row" id="lesnik_dodatak">
+                    <div class="col-25">
+                        <label for="lesnik">Lešnik</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="checkbox" id="lesnik" value="lesnik" name="dodatak[]">
+                    </div>
+                </div>
+                <div class="row" id="maline_dodatak">
+                    <div class="col-25">
+                        <label for="maline">Maline</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="checkbox" id="maline" value="maline" name="dodatak[]">
+                    </div>
+                </div>
+                <div class="row" id="karamela_dodatak">
+                    <div class="col-25">
+                          <label for="karamela">Karamela</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="checkbox" id="karamela" value="karamela" name="dodatak[]">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="kom">Dodatni zahtevi</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="kom" name="kom" placeholder="Vas komentar je.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-25"></div>
+                    <div class="col-75" id="dugmici">
+                    <input type="button" id="obrisiDugme" value="Obrisi" onclick="Obrisi()">
+                    <input type="submit" id="poruciDugme" value="Poruci">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/poruci.js"></script>
+
+</body>
+
+</html>

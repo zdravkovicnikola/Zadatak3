@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ratings</title>
+</head>
+
+<body>
+    <section class="top-nav">
+        <div>
+            <img src="../images/logo.jpg" alt="logonew" height="50" width="50" >
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" target="_blank">Shop</a></li>
+          <li><a href="ratings.html" target="_blank">Ratings</a></li>
+          <li><a href="about.html" target="_blank">About as</a></li>
+        </ul>
+      </section>
+    <div class="customers-say-section">
+        <h3 style="color: #73956f;">Lorem, ipsum dolor.</h3>
+        <h2>Customers Say</h2>
+        <p> <i>Here's what our customers say about us...</i> </p>
+        <div class="container">
+
+            <div class="testimonials" style="background-image: url('../images/osoba1.jpg')">
+                <div class="testimonials-inner">
+                    <div class="testimonial-content">
+                        <h4>Teodora Mihic</h4>
+                        <div class="column">
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum laborum natus est quia
+                                ipsam porro doloribus iure facere placeat? Perspiciatis, repudiandae. Sapiente assumenda
+                                enim rerum, non repellendus inventore eos ratione.</h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimonials" style="background-image: url('../images/osoba2.jpg')">
+                <div class="testimonials-inner">
+                    <div class="testimonial-content">
+                        <h4>Jana Anic</h4>
+                        <div class="column">
+                            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat odit nostrum maiores
+                                dignissimos odio perspiciatis quae corrupti? Exercitationem alias praesentium reiciendis
+                                vel libero sint excepturi sed, repudiandae ullam eaque consequuntur.</h5>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="testimonials" style="background-image: url('../images/osoba3.jpg')">
+                <div class="testimonials-inner">
+                    <div class="testimonial-content">
+                        <h4>Vuk Kostic</h4>
+                        <div class="column">
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ut dolores at, velit
+                                harum minima laborum laboriosam consequuntur asperiores adipisci reiciendis sapiente!
+                                Excepturi aliquam numquam natus rerum cum ipsa. Quam.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimonials" style="background-image: url('../images/osoba4.jpg')">
+                <div class="testimonials-inner">
+                    <div class="testimonial-content">
+                        <h4>Jovana Milic</h4>
+                        <div class="column">
+                            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore atque in natus
+                                recusandae a placeat ducimus reiciendis error dolorum harum. At, consectetur? Ab at
+                                ullam eaque dolore! Harum, neque temporibus.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="forma">
+            <p><i>If you want to share your experience... </i></p>
+            <form id="forma_customers" action="">
+                <div id="polje">
+                    <label for="komentar" style="position: absolute;"></label>
+                    <textarea name="komentar" id="komentar" cols="100" rows="10"
+                        style="width: 100%; height: fit-content; background-color: #eee2df;"
+                        placeholder="Leave your comment here:"></textarea>
+                </div>
+                <div id="send_btn">
+                    <button id="komentarbtn" onclick="DodajKomentar()" type="button">Share</button>
+                </div>
+            </form>
+            <ul class="listaKomentara" id="listaKom">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/dodajKom.js"></script>
+</body>
+
+</html>

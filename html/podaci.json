@@ -1,0 +1,82 @@
+[
+    {
+        "id": "28",
+        "imePrezime": "Nikola Zdravkovic",
+        "adresa": "Adresaaa421",
+        "brojTelefona": "0654879062",
+        "grad": "Novi Sad",
+        "cokolada": "Bela",
+        "dodatak": "lesnik",
+        "komentar": "Blablablablaablablblabla"
+    },
+    {
+        "id": "29",
+        "imePrezime": "Pera Peric",
+        "adresa": "Onatamo 42",
+        "brojTelefona": "0635252341",
+        "grad": "Beograd",
+        "cokolada": "Crna cokolada",
+        "dodatak": "lesnik, karamela",
+        "komentar": "Sta je ovo "
+    },
+    {
+        "id": "30",
+        "imePrezime": null,
+        "adresa": null,
+        "brojTelefona": null,
+        "grad": null,
+        "cokolada": null,
+        "dodatak": "Nema dodataka",
+        "komentar": null
+    },
+    {
+        "id": "31",
+        "imePrezime": null,
+        "adresa": null,
+        "brojTelefona": null,
+        "grad": null,
+        "cokolada": null,
+        "dodatak": "Nema dodataka",
+        "komentar": null
+    },
+    {
+        "id": "32",
+        "imePrezime": "Aco Trlic",
+        "adresa": "Dadarska 73",
+        "brojTelefona": "0635252341",
+        "grad": "Nis",
+        "cokolada": "Crna cokolada",
+        "dodatak": "lesnik, maline, karamela",
+        "komentar": "Moze sve duplo"
+    },
+    {
+        "id": "33",
+        "imePrezime": "Peco Trlic",
+        "adresa": "Dadarska 73",
+        "brojTelefona": "0635252341",
+        "grad": "Nis",
+        "cokolada": "Crna cokolada",
+        "dodatak": "maline, karamela",
+        "komentar": "Brzo ako moze"
+    },
+    {
+        "id": "34",
+        "imePrezime": null,
+        "adresa": null,
+        "brojTelefona": null,
+        "grad": null,
+        "cokolada": null,
+        "dodatak": "Nema dodataka",
+        "komentar": null
+    },
+    {
+        "id": "35",
+        "imePrezime": "Nikola Zdravkovic",
+        "adresa": "Adresaaa421",
+        "brojTelefona": "0654879062",
+        "grad": "Novi Sad",
+        "cokolada": "Crna cokolada",
+        "dodatak": "lesnik, maline",
+        "komentar": "Sve samo ne karamela!"
+    }
+]
